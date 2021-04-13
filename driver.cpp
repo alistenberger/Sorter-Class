@@ -12,7 +12,8 @@ Chapter 7:
 
 [] 7.11 (4pt: 1pt for building heap, 2pt for sort, 1pt for memory use) Show how heapsort processes the input (142, 543, 123, 65, 453, 879, 572, 434, 111, 242, 811, 102) 
 
-[] 7.12  (1pt) What is the running time of heapsort for presorted input?
+[X] 7.12  (1pt) What is the running time of heapsort for presorted input? O(log(N)) to build heap * O(N) to evaluate each item with no need for percolation. 
+So the time complexity is O(Nlog(N))  
 
 [x] 7.15 (2pt) Sort (3, 1, 4, 1, 5, 9, 2, 6) using mergesort
 
@@ -24,6 +25,7 @@ Chapter 7:
 [x] Chapter 7 Bonus Homework
 
 [x] 7.3 (1pt) Suppose we exchange elements a[i] and a[i+k] which were originally out of order. Prove that at least 1 and at most 2k-1 inversions are removed.
+
   We know that an inversion occurs only if an object is out of order. The best case scenario for this problem is if a[i] and a[i+k] are the only objects out of order.
   Average case is N(N-1)/4 inversions. If a[i] and a[i+k] are the only objects out of order this removes every inversion but the initial, 
   this is N(N-1)/4 - N-1((N-1)-1)/4 = N-1 inversions removed. 
