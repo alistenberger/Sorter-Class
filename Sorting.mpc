@@ -1,0 +1,14 @@
+project (Sorting) {
+  exename = Sorting
+  install = .
+
+  specific(make) {
+    compile_flags += -g -std=c++11
+  }
+
+  Source_Files {
+    driver.cpp
+    Array.cpp
+    Sorter.cpp
+  }
+}
