@@ -12,7 +12,9 @@ Chapter 7:
 
 [] 7.11 (4pt: 1pt for building heap, 2pt for sort, 1pt for memory use) Show how heapsort processes the input (142, 543, 123, 65, 453, 879, 572, 434, 111, 242, 811, 102) 
 
-[X] 7.12  (1pt) What is the running time of heapsort for presorted input? O(log(N)) to build heap * O(N) to evaluate each item with no need for percolation. 
+[X] 7.12  (1pt) What is the running time of heapsort for presorted input? 
+
+O(log(N)) to build heap * O(N) to evaluate each item. 
 So the time complexity is O(Nlog(N))  
 
 [x] 7.15 (2pt) Sort (3, 1, 4, 1, 5, 9, 2, 6) using mergesort
