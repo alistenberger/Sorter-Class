@@ -63,6 +63,7 @@ public:
    * @param[in]     arr     The array to be sorted
    * @param[in]     low     The lower bound of the array
    * @param[in]     high    The upper bound of the array
+   * @param[in]     cutoff     The cutoff value for insertion sort
    */
   int quickSort (Array & arr, int low, int high);
 

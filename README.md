@@ -1,12 +1,13 @@
-/**
- * Write three sorting programs, i.e., insertion sort, merge sort, and quicksort, and run on randomly generated 100, 1,000, 5,000 and 10,000 integers to verify the complexity of algorithms. In details,
- * 1.       Write your own program in C or C++ and add step counting instructions at the instruction of comparison, swamping, and additional copying.
- * 2.       Print the sorted results of three algorithms for 100, and 1000 numbers.
- * 3.       Print the counted steps for sorting 100, 1,000, 5,000 and 10,000 numbers.
- * 4.       Record the computer times and print them for above running as well.
- * 5.       Plot the values of counted steps and computer times in a chart and connect them in curves by using Excel or other graph software.
- */
+Chapter 7:
 
-Run with ./Sorting
+7.1   (2pt) Sort the sequence
 
-See word document for output if needed
+7.2 (1pt) What is the running time...
+
+7.11 (4pt: 1pt for building heap, 2pt for sort, 1pt for memory use)
+
+7.12  (1pt) What is the running time for ..
+
+7.15 (2pt) merge sort
+
+7.17 (3pt) running time for merge sort  

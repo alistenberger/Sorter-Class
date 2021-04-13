@@ -119,7 +119,7 @@ void Sorter::mergeSortTimed (Array & arr, int low, int high)
 
 int Sorter::quickSort (Array & arr, int low, int high)
 {
-  if (high - low <= 10) {
+  if (high - low <= 3) {
     insertionSort (arr, high);
     return (0);
   }
@@ -138,7 +138,6 @@ int Sorter::quickSort (Array & arr, int low, int high)
   int pivotValue = arr[high-1];
   int i = low;
   int j = high - 2;
-  this->swap (arr[pivot], arr[high - 1]);
   while (i < j) {
     if (!this->compare (arr[i], pivotValue)) {
       i++;
@@ -154,14 +153,18 @@ int Sorter::quickSort (Array & arr, int low, int high)
     }
   } //end while
   if (this->compare (pivotValue, arr[j])) {
-    this->copy (arr[j], arr[high-1]);
-    this->copy (pivotValue, arr[j]);
+    //this->copy (arr[j], arr[high-1]);
+    //this->copy (pivotValue, arr[j]);
+    this->swap (arr[high-1], arr[j]);
+    pivotValue = arr[high-1];
     quickSort (arr, low, j-1);
     quickSort (arr, j+1, high);
   } else if (!this->compare (pivotValue, arr[j])) {
-    pivotValue = arr[j+1];
-    this->copy (arr[j+1], arr[high-1]);
-    this->copy (pivotValue, arr[j+1]);
+    //pivotValue = arr[j+1];
+    //this->copy (arr[j+1], arr[high-1]);
+    //this->copy (pivotValue, arr[j+1]);
+    this->swap (arr[j+1], arr[high-1]);
+    pivotValue = arr[high-1];
     quickSort (arr, low, j);
     quickSort (arr, j+2, high);
   }
