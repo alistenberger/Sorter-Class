@@ -4,6 +4,7 @@
 #include <chrono>
 #include <iostream>
 #include "Array.h"
+#include "BinaryHeap.h"
 
 /**
  * @class Sorter
@@ -69,6 +70,9 @@ public:
 
   ///Wrapper function for quicksort with time keeping, sorted array, and operations output
   void quickSortTimed (Array & arr, int low, int high);
+
+  ///Uses heapSort to sort an input array
+  void heapSort (BinaryHeap heapSort, Array & dataArray, int heapLength);
 
   //Prints the array
   void printArray (Array & arr);

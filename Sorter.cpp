@@ -193,6 +193,21 @@ void Sorter::quickSortTimed (Array & arr, int low, int high)
   }
 }
 
+void Sorter::heapSort (BinaryHeap heapSort, Array & dataArray, int heapLength)
+{
+  //Insert all values in dataArray into the binary heap
+	for (int i = 0; i < heapLength; i++) {
+ 		int element = dataArray[i];
+ 		heapSort.insert(element);
+		heapSort.printHeap();
+ 	}
+ 	//Run deleteMin for the number of nodes in binary heap
+ 	//Place node in next available spot in dataArray, filling in from the end
+	for (int i = 0; i < heapLength; i++){
+		dataArray[i] = heapSort.deleteMin();
+	}
+}
+
 void Sorter::printArray (Array & arr)
 {
   arr.printArr ();

@@ -31,8 +31,8 @@ LIBPREFIX     = lib
 LIBSUFFIX     = 
 GENFLAGS      = -O
 LDLIBS        = -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
-OBJS          = driver$(OBJEXT) Array$(OBJEXT) Sorter$(OBJEXT)
-SRC           = driver.cpp Array.cpp Sorter.cpp
+OBJS          = driver$(OBJEXT) Array$(OBJEXT) Sorter$(OBJEXT) BinaryHeap$(OBJEXT)
+SRC           = driver.cpp Array.cpp Sorter.cpp BinaryHeap.cpp
 LINK.cc       = $(LD) $(LDFLAGS)
 EXPORTFLAGS   = 
 DEPLIBS       = $(foreach lib, , $(foreach libpath, ., $(wildcard $(libpath)/lib$(lib).a)))
@@ -58,6 +58,9 @@ Array$(OBJEXT): Array.cpp
 
 Sorter$(OBJEXT): Sorter.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Sorter.cpp
+
+BinaryHeap$(OBJEXT): BinaryHeap.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) BinaryHeap.cpp
 
 clean:
 	-$(RM) $(OBJS)

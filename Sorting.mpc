@@ -10,5 +10,6 @@ project (Sorting) {
     driver.cpp
     Array.cpp
     Sorter.cpp
+    BinaryHeap.cpp
   }
 }

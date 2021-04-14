@@ -1,5 +1,6 @@
 #include "Array.h"
 #include "Sorter.h"
+#include "BinaryHeap.h"
 #include <iostream>
 #include <fstream>
 
@@ -10,7 +11,7 @@ Chapter 7:
 
 [x] 7.2 (1pt) What is the running time of insertion Sort if all elements are equal? O(N)
 
-[] 7.11 (4pt: 1pt for building heap, 2pt for sort, 1pt for memory use) Show how heapsort processes the input (142, 543, 123, 65, 453, 879, 572, 434, 111, 242, 811, 102) 
+[x] 7.11 (4pt: 1pt for building heap, 2pt for sort, 1pt for memory use) Show how heapsort processes the input (142, 543, 123, 65, 453, 879, 572, 434, 111, 242, 811, 102) 
 
 [X] 7.12  (1pt) What is the running time of heapsort for presorted input? 
 
@@ -43,7 +44,6 @@ So the time complexity is O(Nlog(N))
 
 int main (int argc, char * argv[]) {
   Sorter sorter1 = Sorter ();
-  //std::ofstream outfile ("HW7_Sort.txt");
   Array problem7_1_Array = Array (9);
   int insertionsortArray [9] = {3, 1, 4, 1, 5, 9, 2, 6, 5};
   for (int i = 0; i < 9; i++) {
@@ -53,6 +53,19 @@ int main (int argc, char * argv[]) {
   std::cout << std::endl << std::endl << "Unsorted Array Problem 7.1" << std::endl << std::endl;
   problem7_1_Array.printArr ();
   sorter1.insertionSortTimed (problem7_1_Array);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Array problem7_11_Array = Array (12);
+  int heapSortArray [12] = {142, 543, 123, 65, 453, 879, 572, 434, 111, 242, 811, 102};
+  for (int i = 0; i < 12; i++) {
+    int j = heapSortArray[i];
+    problem7_11_Array.set (i, j);
+  }
+  std::cout << std::endl << std::endl << "Unsorted Array Problem 7.11" << std::endl << std::endl;
+  problem7_11_Array.printArr ();
+  BinaryHeap binaryHeap (13);
+  sorter1.heapSort (binaryHeap, problem7_11_Array, 12);
+  std::cout << "Sorted Array Problem 7.11" << std::endl << std::endl;
+  problem7_11_Array.printArr ();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
   Array problem7_15_Array = Array (8);
   int mergesortArray [8] = {3, 1, 4, 1, 5, 9, 2, 6};
