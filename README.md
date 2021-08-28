@@ -1,3 +1,11 @@
+Work in progress sorter class which will incorporate various sorting algorithms to be called from class. Intended to act as a utility sorter class where a specific sort can be selected and ran on an array. Also included in sorter class are methods to analyze the number of operations performed, by type, and the running time of these operations in CPU time. Originally created and utilized to solve problems in reference: 
+
+Weiss, Mark Allen, Florida International University. 
+
+Data Structures and Algorithms in C++ - Fourth Edition. 
+
+Upper Saddle River, NJ: Pearson Education, Inc., 2014. 
+
 Driver solves the following problems:
 
 Chapter 7:
