@@ -1,3 +1,5 @@
+Driver solves the following problems:
+
 Chapter 7:
 
 7.1   (2pt) Sort the sequence
@@ -11,3 +13,4 @@ Chapter 7:
 7.15 (2pt) merge sort
 
 7.17 (3pt) running time for merge sort  
+
