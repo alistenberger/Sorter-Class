@@ -6,6 +6,8 @@ Chapter 7:
 
 7.2 
 
+7.3
+
 7.11
 
 7.12 
@@ -13,6 +15,8 @@ Chapter 7:
 7.15 
 
 7.17 
+
+7.19
 
 Important note:
 
